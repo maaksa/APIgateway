@@ -10,7 +10,6 @@ public final class SecurityConstants {
 
     public static final String AUTH_LOGIN_PATH = "/rest-user-service/auth/login";
     public static final String AUTH_SIGNIN_PATH = "/rest-user-service/auth/signin";
-    public static final String AUTH_REGISTER_PATH = "/rest-user-service/auth/login";
-    public static final String LOGIN_PATH = "/rest-user-service/login";
+    public static final String AUTH_REGISTER_PATH = "/rest-user-service/auth/register";
 
 }

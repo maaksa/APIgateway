@@ -27,7 +27,7 @@ public class JwtWebSecurity extends WebSecurityConfigurerAdapter {
                 .and().cors().configurationSource(corsConfigurationSource())
                 .and().exceptionHandling().authenticationEntryPoint((req, rsp, e) -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
                 .and().addFilterAfter(new JwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class).authorizeRequests()
-                .antMatchers(LOGIN_PATH, AUTH_LOGIN_PATH, AUTH_SIGNIN_PATH, AUTH_REGISTER_PATH).permitAll()
+                .antMatchers(AUTH_LOGIN_PATH, AUTH_SIGNIN_PATH, AUTH_REGISTER_PATH).permitAll()
                 .anyRequest().authenticated();
     }
 

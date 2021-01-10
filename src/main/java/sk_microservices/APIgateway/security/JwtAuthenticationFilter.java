@@ -31,7 +31,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
 
         String token = req.getHeader(HEADER_STRING);
-
+        System.out.println(token);
+        System.out.println(req.getHeader("Content-Type"));
         UsernamePasswordAuthenticationToken authentication = null;
         authentication = getAuthentication(req, token);
         if(authentication != null) {
