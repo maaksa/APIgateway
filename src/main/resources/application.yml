@@ -22,5 +22,12 @@ management:
       exposure:
         include: "*"
 
+#zuul:
+#  sensitive-headers: Cookie,Set-Cookie
+
 zuul:
   sensitive-headers: Cookie, Set-Cookie
+
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000
